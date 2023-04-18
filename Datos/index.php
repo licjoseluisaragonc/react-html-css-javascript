@@ -1,29 +1,29 @@
 <?php
-$pdo=new PDO("mysql:dbname=basededatos;host=127.0.0.1","root","123");
+$pdo=new PDO("mysql:dbname=basededatos;host=127.0.0.1","root","12345");
 	
 	switch($_POST['accion']){
 		
-		// Inserta la informaci髇
+		// Inserta la informaci贸n
 		case 1:
-		$statement = $pdo->prepare("INSERT INTO tareas(id,titulo,estatus)VALUES(null,:titulo,1)");
+		$statement = $pdo->prepare("INSERT INTO Trabajos(id,titulo,estatus)VALUES(null,:titulo,1)");
 		$statement->execute(array("titulo" => $_POST['titulo']));
 		break; 
 		
-		// Borrar la informaci髇 
+		// Borrar la informaci贸n 
 		case 2:
 		$statement = $pdo->prepare("DELETE FROM tareas WHERE id=:id");
 		$statement->execute(array("id" => $_POST['id']));
 		break;
 		
-		// Modifica la informaci髇 
+		// Modifica la informaci贸n 
 		case 3:
 		
 		break;
 		
-		// Consulta la informaci髇
+		// Consulta la informaci贸n
 		default:
 			header('Content-Type: application/json');
-			$statement=$pdo->prepare("SELECT * FROM tareas");
+			$statement=$pdo->prepare("SELECT * FROM Trabajos");
 			$statement->execute();
 			$results=$statement->fetchAll(PDO::FETCH_ASSOC);
 			$json=json_encode($results);

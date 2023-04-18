@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Servidor: localhost
--- Tiempo de generación: 22-04-2015 a las 13:38:04
--- Versión del servidor: 5.0.51
--- Versión de PHP: 5.2.6
+-- Tiempo de generaciÃ³n: 22-04-2015 a las 13:38:04
+-- VersiÃ³n del servidor: 5.0.51
+-- VersiÃ³n de PHP: 5.2.6
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -30,6 +30,6 @@ CREATE TABLE `tareas` (
 -- Volcar la base de datos para la tabla `tareas`
 -- 
 
-INSERT INTO `tareas` VALUES (15, 'Curso de Three.js', 1);
-INSERT INTO `tareas` VALUES (16, 'Curso de React.js', 1);
-INSERT INTO `tareas` VALUES (19, 'Curso de Babylon.js', 1);
+INSERT INTO `tareas` VALUES (15, 'Three.js', 1);
+INSERT INTO `tareas` VALUES (16, 'React.js', 1);
+INSERT INTO `tareas` VALUES (19, 'Babylon.js', 1);
